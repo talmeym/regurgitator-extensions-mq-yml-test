@@ -1,0 +1,9 @@
+sequence:
+ steps:
+ - create-jms-response:
+    id: create-jsm-response-1
+    name: toTest1
+    value: value
+    jms-destination: destination
+    jms-correlation-id: correlation
+    jms-type: type
