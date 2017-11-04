@@ -1,0 +1,5 @@
+sequence:
+ steps:
+ - jms-call:
+    id: jms-call-1
+    destination: queue://something
