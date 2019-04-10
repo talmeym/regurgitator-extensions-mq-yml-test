@@ -8,6 +8,7 @@ import com.emarte.regurgitator.extensions.mq.CreateJmsResponseYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.MqExtensionsLoaderTestExpectations.CreateJmsResponse;
 
 public class CreateJmsResponseYmlLoaderTest extends YmlLoaderTest {
 
@@ -17,11 +18,11 @@ public class CreateJmsResponseYmlLoaderTest extends YmlLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/CreateJmsResponse.yml", "com.emarte.regurgitator.extensions.mq.CreateJmsResponse:[com.emarte.regurgitator.core.CreateResponse:['create-jsm-response-1',com.emarte.regurgitator.core.ValueSource:[null,'value'],null],'message-id','type','destination','correlation',1,2,3,true,'reply-to',123456789]");
+        assertExpectation("classpath:/CreateJmsResponse.yml", CreateJmsResponse);
     }
 
     @Test
-    public void testFullLoadJson() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/CreateJmsResponse_fullLoad.yml");
     }
 }
