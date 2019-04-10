@@ -8,10 +8,9 @@ import com.emarte.regurgitator.extensions.mq.CreateJmsResponseYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static com.emarte.regurgitator.test.MqExtensionsLoaderTestExpectations.CreateJmsResponse;
+import static com.emarte.regurgitator.test.MqExtensionsLoaderTestExpectations.*;
 
 public class CreateJmsResponseYmlLoaderTest extends YmlLoaderTest {
-
     public CreateJmsResponseYmlLoaderTest() {
         super(new CreateJmsResponseYmlLoader());
     }
@@ -19,6 +18,16 @@ public class CreateJmsResponseYmlLoaderTest extends YmlLoaderTest {
     @Test
     public void testThis() throws Exception {
         assertExpectation("classpath:/CreateJmsResponse.yml", CreateJmsResponse);
+    }
+
+    @Test
+    public void testProcessor() throws Exception {
+        assertExpectation("classpath:/CreateJmsResponse_processor.yml", CreateJmsResponse_processor);
+    }
+
+    @Test
+    public void testMutipleProcessor() throws Exception {
+        assertExpectation("classpath:/CreateJmsResponse_multipleProcessor.yml", CreateJmsResponse_multipleProcessor);
     }
 
     @Test
