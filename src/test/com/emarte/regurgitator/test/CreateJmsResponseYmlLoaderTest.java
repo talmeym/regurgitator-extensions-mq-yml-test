@@ -26,7 +26,7 @@ public class CreateJmsResponseYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testMutipleProcessor() throws Exception {
+    public void testMultipleProcessors() throws Exception {
         assertExpectation("classpath:/CreateJmsResponse_multipleProcessors.yml", CreateJmsResponse_multipleProcessors);
     }
 
