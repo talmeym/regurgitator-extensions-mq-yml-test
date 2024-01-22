@@ -16,7 +16,7 @@ public class JmsCallYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testLoader() throws Exception {
         assertExpectation("classpath:/JmsCall.yml", JmsCall);
     }
 

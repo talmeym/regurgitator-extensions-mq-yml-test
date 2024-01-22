@@ -16,7 +16,7 @@ public class CreateJmsResponseYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testLoader() throws Exception {
         assertExpectation("classpath:/CreateJmsResponse.yml", CreateJmsResponse);
     }
 
